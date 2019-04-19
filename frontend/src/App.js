@@ -47,13 +47,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>
+        
         {this.state.response && this.state.response.map(function(obj){
-          return <div>
-            {obj.title}
-          </div>
+          return <ul>
+            <li key={obj.id}>{obj.title}</li>
+          </ul>
         })}
-        </p>
+        
         <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Post to Server:</strong>
